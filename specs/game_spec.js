@@ -68,4 +68,21 @@ describe("Game", function(){
     assert.strictEqual(result2, 3);
   });
 
+  it("should compare hands", function(){
+    game.addCard(superman);
+    game.addCard(batman);
+    game.addCard(wonderWoman);
+    game.addCard(theFlash);
+    game.addCard(blackWidow);
+    game.addCard(scarletWitch);
+    game.deal(player1);
+    game.deal(player1);
+    game.deal(player1);
+    game.deal(player2);
+    game.deal(player2);
+    game.deal(player2);
+    const result = game.compareHands(player1, player2);
+    assert.strictEqual(result, "Player 1 wins!");
+  });
+
 });

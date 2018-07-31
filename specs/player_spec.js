@@ -15,14 +15,21 @@ describe("Player", function(){
   });
 
   it("should start with no cards", function(){
-      const result = player1.cards.length;
-      assert.strictEqual(result, 0);
-    });
-
-    it("should add a card", function(){
-        player1.addCard(superman);
-        const result = player1.cards.length;
-        assert.strictEqual(result, 1);
-      });
-
+    const result = player1.cards.length;
+    assert.strictEqual(result, 0);
   });
+
+  it("should add a card", function(){
+    player1.addCard(superman);
+    const result = player1.cards.length;
+    assert.strictEqual(result, 1);
+  });
+
+  it("should be able to play hand", function(){
+    player1.addCard(superman);
+    player1.playCard("6");
+    const result = player1.cards.length;
+    assert.strictEqual(result, 0);
+  });
+
+});
