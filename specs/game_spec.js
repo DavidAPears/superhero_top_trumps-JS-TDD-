@@ -22,15 +22,31 @@ describe("Game", function(){
   });
 
   it("should start with no players", function(){
-      const result = game.players.length;
-      assert.strictEqual(result, 0);
-    });
-
-    it("should add players", function(){
-        game.addPlayer(player1);
-        game.addPlayer(player2);
-        const result = game.players.length;
-        assert.strictEqual(result, 2);
-      });
-
+    const result = game.players.length;
+    assert.strictEqual(result, 0);
   });
+
+  it("should add players", function(){
+    game.addPlayer(player1);
+    game.addPlayer(player2);
+    const result = game.players.length;
+    assert.strictEqual(result, 2);
+  });
+
+  it("should start with no cards", function(){
+    const result = game.cards.length;
+    assert.strictEqual(result, 0);
+  });
+
+  it("should get all the cards", function(){
+    game.addCard(superman);
+    game.addCard(batman);
+    game.addCard(wonderWoman);
+    game.addCard(theFlash);
+    game.addCard(blackWidow);
+    game.addCard(scarletWitch);
+    const result = game.cards.length;
+    assert.strictEqual(result, 6);
+  });
+
+});
