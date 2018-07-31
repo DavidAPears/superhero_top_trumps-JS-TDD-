@@ -49,4 +49,23 @@ describe("Game", function(){
     assert.strictEqual(result, 6);
   });
 
+  it("should be able to deal", function(){
+    game.addCard(superman);
+    game.addCard(batman);
+    game.addCard(wonderWoman);
+    game.addCard(theFlash);
+    game.addCard(blackWidow);
+    game.addCard(scarletWitch);
+    game.deal(player1);
+    game.deal(player1);
+    game.deal(player1);
+    game.deal(player2);
+    game.deal(player2);
+    game.deal(player2);
+    const result = game.deck.length;
+    assert.strictEqual(result, 0);
+    const result2 = player1.cards.length;
+    assert.strictEqual(result2, 3);
+  });
+
 });
