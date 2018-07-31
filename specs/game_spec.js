@@ -34,7 +34,7 @@ describe("Game", function(){
   });
 
   it("should start with no cards", function(){
-    const result = game.cards.length;
+    const result = game.deck.length;
     assert.strictEqual(result, 0);
   });
 
@@ -45,7 +45,7 @@ describe("Game", function(){
     game.addCard(theFlash);
     game.addCard(blackWidow);
     game.addCard(scarletWitch);
-    const result = game.cards.length;
+    const result = game.deck.length;
     assert.strictEqual(result, 6);
   });
 

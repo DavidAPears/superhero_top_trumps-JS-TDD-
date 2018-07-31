@@ -1,6 +1,6 @@
 const Game = function(){
   this.players = [];
-  this.cards = [];
+  this.deck = [];
 }
 
 Game.prototype.addPlayer = function(player) {
@@ -8,7 +8,11 @@ Game.prototype.addPlayer = function(player) {
 };
 
 Game.prototype.addCard = function(card) {
-  this.cards.push(card);
+  this.deck.push(card);
+};
+
+Game.prototype.deal = function () {
+
 };
 
 module.exports = Game;
