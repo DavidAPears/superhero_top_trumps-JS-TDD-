@@ -5,6 +5,4 @@ const Card = function(name, intelligence, strength, agility){
   this.agility = agility;
 }
 
-
-
 module.exports = Card;
